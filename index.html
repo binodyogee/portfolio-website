@@ -105,15 +105,25 @@
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3"><span>Binod Yogee</span></h1>
 			            <h2 class="mb-4">A Freelance IT Student </h2>
-			            <button onclick="openPopup()">Hire me</button> 
-							<div id="overlay">
-  								<div id="popup">
-    								<h3>Hello 👋👨‍💻</h3>
-    									<p>ContactNo:</p>
-    										<p>+977 np 9869279959|Mail:binodyogi145@gmail.com </p>
-    											<button onclick="closePopup()">Close</button>
-  												</div>
-												</div>
+						<button onclick="openPopup()">Show Popup</button>
+<div id="overlay">
+  <div id="popup">
+    <h3>Hello 👋👨‍💻</h3>
+    <p>ContactNo:</p>
+    <p>+977 np 9869279959|Mail:binodyogi145@gmail.com </p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script>
+function openPopup() {
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closePopup() {
+  document.getElementById("overlay").classList.remove("active");
+}
+</script>
 							<a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 					   <ul class="ftco-footer-social list-unstyled float-md-center float-lft mt-5">
 		                <li class="ftco-animate"><a href="https://github.com/binodyogee"><span class="icon-github"></span></a></li>
@@ -653,16 +663,6 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   
-  <script src="js/main.js"></script>
-<script>
-function openPopup() {
-  document.getElementById("overlay").classList.add("active");
-}
-
-function closePopup() {
-  document.getElementById("overlay").classList.remove("active");
-}
-</script>
- 
+  <script src="js/main.js"></script> 
   </body>
 </html>
