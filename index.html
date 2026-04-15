@@ -21,51 +21,6 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-	    <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    /* Overlay background */
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      display: none;
-    }
-
-    /* Popup box */
-    #popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.7);
-      background: white;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-
-    /* Active state (animation trigger) */
-    #overlay.active {
-      display: block;
-    }
-
-    #overlay.active #popup {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    button {
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-  </style>
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -105,23 +60,26 @@
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3"><span>Binod Yogee</span></h1>
 			            <h2 class="mb-4">A Freelance IT Student </h2>
-						<button onclick="openPopup()">Show Popup</button>
-<div id="overlay">
-  <div id="popup">
-    <h3>Hello 👋👨‍💻</h3>
-    <p>ContactNo:</p>
-    <p>+977 np 9869279959|Mail:binodyogi145@gmail.com </p>
+<a href="#" onclick="openPopup(event)">Hire Me </a>
+
+<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+  <div id="popup" style="background:#fff; padding:20px; margin:15% auto; width:200px; text-align:center; transform:scale(0.7); transition:0.3s;">
+    <p>Hello! 👨‍💻
+Contact No : +977 9869279959|mail:binodyogi145@gmail.com
+</p>
     <button onclick="closePopup()">Close</button>
   </div>
 </div>
 
 <script>
-function openPopup() {
-  document.getElementById("overlay").classList.add("active");
+function openPopup(e) {
+  e.preventDefault();
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("popup").style.transform = "scale(1)";
 }
 
 function closePopup() {
-  document.getElementById("overlay").classList.remove("active");
+  document.getElementById("overlay").style.display = "none";
 }
 </script>
 							<a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
